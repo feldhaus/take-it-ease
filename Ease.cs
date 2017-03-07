@@ -1,4 +1,4 @@
-﻿/*
+/*
 Copyright (c) 2017 Maicon Feldhaus
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -93,7 +93,7 @@ public static class Ease
     /// <returns></returns>
 	public static double OutQuint(double t, double b, double c, double d)
     {
-        return c * ((t /= d - 1.0) * t * t * t * t + 1.0) + b;
+        return c * ((t = t / d - 1.0) * t * t * t * t + 1.0) + b;
     }
 
     /// <summary>
@@ -133,7 +133,7 @@ public static class Ease
     /// <returns></returns>
 	public static double OutQuart(double t, double b, double c, double d)
     {
-        return -c * ((t /= d - 1.0) * t * t * t - 1.0) + b;
+        return -c * ((t = t / d - 1.0) * t * t * t - 1.0) + b;
     }
 
     /// <summary>
@@ -415,7 +415,7 @@ public static class Ease
     /// <returns></returns>
 	public static double OutBack(double t, double b, double c, double d, double s = 1.70158)
     {
-        return c * ((t /= d - 1.0) * t * ((s + 1.0) * t + s) + 1.0) + b;
+        return c * ((t = t / d - 1.0) * t * ((s + 1.0) * t + s) + 1.0) + b;
     }
 
     /// <summary>
