@@ -67,7 +67,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutSine(double t, double b, double c, double d)
+    public static double InOutSine(double t, double b, double c, double d)
     {
         return -c / 2.0 * (Math.Cos(Math.PI * t / d) - 1.0) + b;
     }
@@ -91,7 +91,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double OutQuint(double t, double b, double c, double d)
+    public static double OutQuint(double t, double b, double c, double d)
     {
         return c * ((t = t / d - 1.0) * t * t * t * t + 1.0) + b;
     }
@@ -103,7 +103,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutQuint(double t, double b, double c, double d)
+    public static double InOutQuint(double t, double b, double c, double d)
     {
         if ((t /= d / 2.0) < 1.0)
         {
@@ -131,7 +131,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double OutQuart(double t, double b, double c, double d)
+    public static double OutQuart(double t, double b, double c, double d)
     {
         return -c * ((t = t / d - 1.0) * t * t * t - 1.0) + b;
     }
@@ -143,7 +143,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutQuart(double t, double b, double c, double d)
+    public static double InOutQuart(double t, double b, double c, double d)
     {
         if ((t /= d / 2.0) < 1.0)
         {
@@ -171,7 +171,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double OutQuad(double t, double b, double c, double d)
+    public static double OutQuad(double t, double b, double c, double d)
     {
         return -c * (t /= d) * (t - 2.0) + b;
     }
@@ -183,7 +183,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutQuad(double t, double b, double c, double d)
+    public static double InOutQuad(double t, double b, double c, double d)
     {
         if ((t /= d / 2.0) < 1.0)
         {
@@ -211,7 +211,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double OutExpo(double t, double b, double c, double d)
+    public static double OutExpo(double t, double b, double c, double d)
     {
         return (t == d) ? b + c : c * (-Math.Pow(2.0, -10.0 * t / d) + 1.0) + b;
     }
@@ -223,7 +223,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutExpo(double t, double b, double c, double d)
+    public static double InOutExpo(double t, double b, double c, double d)
     {
         if (t == 0)
         {
@@ -249,7 +249,7 @@ public static class Ease
     /// <param name="a">Amplitude</param>
     /// <param name="p">Period</param>
     /// <returns></returns>
-	public static double InElastic(double t, double b, double c, double d, double a = 0, double p = 0)
+    public static double InElastic(double t, double b, double c, double d, double a = 0, double p = 0)
     {
         double s;
         if (t == 0)
@@ -285,7 +285,7 @@ public static class Ease
     /// <param name="a">Amplitude</param>
     /// <param name="p">Period</param>
     /// <returns></returns>
-	public static double OutElastic(double t, double b, double c, double d, double a = 0, double p = 0)
+    public static double OutElastic(double t, double b, double c, double d, double a = 0, double p = 0)
     {
         double s;
         if (t == 0)
@@ -321,7 +321,7 @@ public static class Ease
     /// <param name="a">Amplitude</param>
     /// <param name="p">Period</param>
     /// <returns></returns>
-	public static double InOutElastic(double t, double b, double c, double d, double a = 0, double p = 0)
+    public static double InOutElastic(double t, double b, double c, double d, double a = 0, double p = 0)
     {
         double s;
         if (t == 0)
@@ -371,7 +371,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double OutCirc(double t, double b, double c, double d)
+    public static double OutCirc(double t, double b, double c, double d)
     {
         return c * Math.Sqrt(1.0 - (t = t / d - 1.0) * t) + b;
     }
@@ -383,7 +383,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutCirc(double t, double b, double c, double d)
+    public static double InOutCirc(double t, double b, double c, double d)
     {
         if ((t /= d / 2.0) < 1.0)
         {
@@ -413,7 +413,7 @@ public static class Ease
     /// <param name="d">Duration</param>
     /// <param name="s">Overshoot</param>
     /// <returns></returns>
-	public static double OutBack(double t, double b, double c, double d, double s = 1.70158)
+    public static double OutBack(double t, double b, double c, double d, double s = 1.70158)
     {
         return c * ((t = t / d - 1.0) * t * ((s + 1.0) * t + s) + 1.0) + b;
     }
@@ -426,7 +426,7 @@ public static class Ease
     /// <param name="d">Duration</param>
     /// <param name="s">Overshoot</param>
     /// <returns></returns>
-	public static double InOutBack(double t, double b, double c, double d, double s = 1.70158)
+    public static double InOutBack(double t, double b, double c, double d, double s = 1.70158)
     {
         if ((t /= d / 2.0) < 1.0)
         {
@@ -454,7 +454,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double OutBounce(double t, double b, double c, double d)
+    public static double OutBounce(double t, double b, double c, double d)
     {
         if ((t /= d) < (1.0 / 2.75))
         {
@@ -481,7 +481,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutBounce(double t, double b, double c, double d)
+    public static double InOutBounce(double t, double b, double c, double d)
     {
         if (t < d / 2.0)
         {
@@ -509,7 +509,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double OutCubic(double t, double b, double c, double d)
+    public static double OutCubic(double t, double b, double c, double d)
     {
         return c * ((t = t / d - 1.0) * t * t + 1.0) + b;
     }
@@ -521,7 +521,7 @@ public static class Ease
     /// <param name="c">Change in value</param>
     /// <param name="d">Duration</param>
     /// <returns></returns>
-	public static double InOutCubic(double t, double b, double c, double d)
+    public static double InOutCubic(double t, double b, double c, double d)
     {
         if ((t /= d / 2.0) < 1.0)
         {
